@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Website!</title>
+    <style>
+        /* Основные стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+            background: url('https://images.pexels.com/photos/1366957/pexels-photo-1366957.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+            animation: slideIn 1.5s ease-out;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            color: #FF6347; /* Цвет для заголовка */
+            animation: fadeIn 2s ease-out;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            animation: fadeIn 2.5s ease-out;
+        }
+
+        .button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 30px;
+            background-color: #FF6347;
+            color: white;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .button:hover {
+            transform: translateY(-5px);
+            background-color: #FF4500;
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Анимации */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateY(-100px); }
+            100% { transform: translateY(0); }
+        }
+
+        /* Мобильная адаптация */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            p {
+                font-size: 1.1em;
+            }
+
+            .button {
+                padding: 12px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Our Beautiful Website</h1>
+        <p>Enjoy your stay here, discover something new, and explore!</p>
+        <button class="button" onclick="changeContent()">Explore More</button>
+    </div>
+
+    <script>
+        // JavaScript для изменения контента после клика на кнопку
+        function changeContent() {
+            document.querySelector('h1').textContent = "You’ve just started exploring!";
+            document.querySelector('p').textContent = "Now you're part of our community. Let's make the most of this experience!";
+            document.querySelector('.button').textContent = "Join the Adventure";
+        }
+    </script>
+</body>
+</html>
